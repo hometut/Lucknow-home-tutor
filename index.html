@@ -1,67 +1,608 @@
-      margin-right: 10px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucknow Home Tutors | Premier Home Tuition in Jankipuram & Lucknow</title>
+  <meta name="description" content="Find highly qualified home tutors in Nyay Vihar Colony, Jankipuram and across Lucknow. Free trial class available!">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .btn.primary {
-      background: #2563eb;
-      color: #fff;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .btn.whatsapp {
-      background: #25d366;
-      color: #fff;
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* HEADER & NAVIGATION */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      z-index: 1000;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.35rem;
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .menu-btn {
+      background: #f1f5f9;
+      border: none;
+      font-size: 1.3rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #1e293b;
+    }
+
+    nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      flex-direction: column;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      padding: 20px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    nav.active {
+      display: flex;
+    }
+
+    nav a {
+      padding: 14px 28px;
+      text-decoration: none;
+      color: #334155;
+      font-weight: 600;
+      border-bottom: 1px solid #f8fafc;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+      background: #f8fafc;
+    }
+
+    nav a.nav-cta {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      margin: 12px 28px 0;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .menu-btn { display: none; }
+      nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        box-shadow: none;
+        padding: 0;
+        width: auto;
+        border: none;
+        background: transparent;
+        align-items: center;
+      }
+      nav a {
+        border: none;
+        padding: 8px 16px;
+      }
+      nav a.nav-cta {
+        margin: 0 0 0 12px;
+        padding: 10px 20px;
+      }
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 60px 20px;
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 40px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      color: #64748b;
+      font-size: 1.05rem;
+    }
+
+    /* HERO */
+    .hero {
+      padding-top: 50px;
+      padding-bottom: 60px;
     }
 
     .badge {
-      display: inline-block;
-      background: #e0e7ff;
-      color: #3730a3;
-      padding: 5px 12px;
-      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1d4ed8;
+      padding: 8px 16px;
+      border-radius: 30px;
       font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 15px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #0f172a;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #475569;
+      margin-bottom: 30px;
+      max-width: 600px;
     }
 
     .hero-actions {
-      margin: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: #ffffff;
+      box-shadow: 0 10px 20px -5px rgba(37, 211, 102, 0.35);
+    }
+
+    /* CARDS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 28px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      background: #eff6ff;
+      color: #2563eb;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    .card.featured {
+      border: 2px solid #2563eb;
+      background: linear-gradient(180deg, #ffffff, #f0f6ff);
+    }
+
+    /* FORM */
+    .booking-wrapper {
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+      max-width: 550px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      color: #334155;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    /* FAQ */
+    .faq-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+
+    .faq-question {
+      padding: 18px 24px;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      padding: 0 24px 18px;
+      color: #64748b;
+      display: none;
+      font-size: 0.95rem;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* FLOATING BUTTONS */
+    .floating-btns {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .float-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 1.4rem;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+    }
+
+    .float-wa { background: #25d366; }
+    .float-call { background: #2563eb; }
+
+    /* FOOTER */
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 50px 20px 30px;
+      text-align: center;
+    }
+
+    footer h4 {
+      color: #ffffff;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
     }
   </style>
 </head>
 <body>
 
-  <header class="header">
-    <a class="logo" href="#home">Lucknow Home Tutors</a>
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <!-- Sticky Header -->
+  <header>
+    <a class="logo" href="#home"><i class="fa-solid fa-graduation-cap"></i> Lucknow Home Tutors</a>
+    <button class="menu-btn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
     <nav id="nav">
-      <a href="#home">Home</a>
-      <a href="#subjects">Subjects</a>
-      <a href="#classes">Classes</a>
-      <a href="#areas">Areas</a>
-      <a href="#tutors">Tutors</a>
-      <a href="#contact">Contact</a>
-      <a class="nav-cta" href="#book">Book Tutor</a>
+      <a href="#home" onclick="toggleMenu()">Home</a>
+      <a href="#subjects" onclick="toggleMenu()">Subjects</a>
+      <a href="#classes" onclick="toggleMenu()">Classes</a>
+      <a href="#areas" onclick="toggleMenu()">Areas</a>
+      <a href="#faqs" onclick="toggleMenu()">FAQs</a>
+      <a href="#book" class="nav-cta" onclick="toggleMenu()">Book Demo</a>
     </nav>
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero" id="home">
-      <div class="hero-copy">
-        <div class="badge">🏠 1-to-1 Home Tuition in Lucknow</div>
-        <h1>Find the right <span>home tutor</span> for your child.</h1>
-        <p>Experienced tutors, personalized classes, and convenient home tuition across Lucknow.</p>
-        
-        <div class="hero-actions">
-          <a class="btn primary" href="#book">Book a Tutor</a>
-          <a class="btn whatsapp" href="https://wa.me/">WhatsApp Us</a>
+      <div class="badge">
+        <i class="fa-solid fa-shield-halved"></i> Verified Home Tuition in Jankipuram & Lucknow
+      </div>
+      <h1>Find the Perfect <span>Home Tutor</span> for Your Child</h1>
+      <p>Personalized 1-to-1 home tuition in Nyay Vihar Colony, Jankipuram, and across Lucknow. Guaranteed improvement with expert & background-verified tutors.</p>
+      
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#book"><i class="fa-solid fa-calendar-check"></i> Book Free Demo</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/919305863082?text=Hello,%20I%20need%20a%20home%20tutor%20in%20Lucknow"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+      </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section id="subjects">
+      <div class="section-header">
+        <h2>Subjects We Teach</h2>
+        <p class="section-subtitle">Comprehensive coverage for CBSE, ICSE, and UP Board curricula.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-calculator"></i></div>
+          <h3>Mathematics</h3>
+          <p>Conceptual clarity, problem-solving techniques, and board exam mastery for Class 1 to 12th.</p>
         </div>
-        
-        <div class="trust-row">
-          <p>✓ Personalized learning &nbsp; ✓ Flexible timings &nbsp; ✓ Local tutors</p>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-flask"></i></div>
+          <h3>Science / Physics / Chemistry</h3>
+          <p>In-depth conceptual understanding, lab practical guidance, and competitive foundation.</p>
         </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-book-open"></i></div>
+          <h3>English & Grammar</h3>
+          <p>Fluency development, literature analysis, and score-boosting grammar practice.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Commerce & Accounts</h3>
+          <p>Specialized guidance for 11th & 12th Accounts, Economics, and Business Studies.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Classes Covered -->
+    <section id="classes">
+      <div class="section-header">
+        <h2>Classes Covered</h2>
+        <p class="section-subtitle">Tailored learning strategies for every academic stage.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-shapes"></i></div>
+          <h3>Primary (Class 1st - 5th)</h3>
+          <p>All-in-one tutors building strong foundational concepts in Reading, Maths, and Writing.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3>Middle School (Class 6th - 8th)</h3>
+          <p>Subject-wise dedicated attention to transition smoothly into advanced academic concepts.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+          <h3>Secondary (Class 9th & 10th)</h3>
+          <p>Focused board exam preparation, revision strategies, and sample paper solving.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>Senior Secondary (11th & 12th)</h3>
+          <p>Expert tutors specialized in Science, Commerce, and Humanities streams.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Service Areas -->
+    <section id="areas">
+      <div class="section-header">
+        <h2>Service Areas</h2>
+        <p class="section-subtitle">Top-rated home tutors available at your doorstep.</p>
+      </div>
+      <div class="grid">
+        <div class="card featured">
+          <div class="card-icon" style="background:#2563eb; color:#fff;"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>Nyay Vihar Colony, Jankipuram</h3>
+          <p>Prime coverage zone with immediate tutor availability and 100% verified staff.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>Jankipuram Extension</h3>
+          <p>Comprehensive home tuition services across all sectors.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>Aliganj & Mahanagar</h3>
+          <p>Expert tutors available for primary to senior secondary classes.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>Gomti Nagar & Indira Nagar</h3>
+          <p>Highly qualified home tutors for all major boards.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-subtitle">Have questions? We are here to help.</p>
+      </div>
+      <div style="max-width: 750px; margin: 0 auto;">
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>Is the first demo class completely free?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">Yes, we provide 1 trial/demo class absolutely free so you can evaluate the teacher's style before committing.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>Are the home tutors background verified?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">Yes, all our tutors undergo background checks and academic qualification verification for safe and trusted teaching.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question">
+            <span>What happens if I am not satisfied with the tutor?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">If you are not satisfied, we will arrange a replacement tutor immediately at no extra charge.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="book">
+      <div class="booking-wrapper">
+        <div class="section-header" style="margin-bottom:25px;">
+          <h2>Request a Free Demo</h2>
+          <p class="section-subtitle">Submit details to get an instant tutor recommendation.</p>
+        </div>
+        <form onsubmit="sendToWhatsApp(event)">
+          <div class="form-group">
+            <label>Student Name</label>
+            <input type="text" id="studentName" placeholder="Enter student's full name" required>
+          </div>
+          <div class="form-group">
+            <label>Class / Grade</label>
+            <input type="text" id="studentClass" placeholder="e.g. Class 10th (CBSE)" required>
+          </div>
+          <div class="form-group">
+            <label>Subjects Required</label>
+            <input type="text" id="studentSubject" placeholder="e.g. Mathematics & Physics" required>
+          </div>
+          <div class="form-group">
+            <label>Your Area in Lucknow</label>
+            <input type="text" id="studentArea" value="Nyay Vihar Colony, Jankipuram" required>
+          </div>
+          <button type="submit" class="btn btn-whatsapp" style="width: 100%; border:none; margin-top:10px;">
+            <i class="fa-brands fa-whatsapp"></i> Book Demo via WhatsApp
+          </button>
+        </form>
       </div>
     </section>
   </main>
 
+  <!-- Floating Quick Actions -->
+  <div class="floating-btns">
+    <a href="https://wa.me/919305863082?text=Hello,%20I%20need%20a%20home%20tutor" class="float-btn float-wa" target="_blank" title="WhatsApp Us">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="tel:9305863082" class="float-btn float-call" title="Call Us">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <h4>Lucknow Home Tutors</h4>
+    <p><i class="fa-solid fa-location-dot"></i> Nyay Vihar Colony, Jankipuram, Lucknow, UP</p>
+    <p style="margin-top: 5px;"><i class="fa-solid fa-phone"></i> Direct Call/WhatsApp: <strong>+91 9305863082</strong></p>
+    <p style="margin-top: 25px; font-size: 0.85rem; opacity: 0.6;">© 2026 Lucknow Home Tutors. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      if (window.innerWidth < 768) {
+        nav.classList.toggle('active');
+      }
+    }
+
+    function toggleFaq(element) {
+      element.classList.toggle('active');
+    }
+
+    function sendToWhatsApp(event) {
+      event.preventDefault();
+      
+      const phoneNumber = "919305863082"; 
+      
+      const name = document.getElementById('studentName').value;
+      const classVal = document.getElementById('studentClass').value;
+      const subject = document.getElementById('studentSubject').value;
+      const area = document.getElementById('studentArea').value;
+
+      const message = `Hello Lucknow Home Tutors,%0A%0AI want to book a Free Demo Class:%0A- *Student Name:* ${name}%0A- *Class:* ${classVal}%0A- *Subject:* ${subject}%0A- *Area:* ${area}`;
+      
+      window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+    }
+  </script>
+
 </body>
-</html>
-<a class="btn whatsapp" href="https://wa.me/919305863082">WhatsApp Us</a>
+      </html>
+      

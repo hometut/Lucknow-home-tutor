@@ -1,42 +1,116 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=dev
-  <title>Lucknow Home Tutors | Best Home T
-  <meta name="description" content="Find v
-  <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
-
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Headings with Vibrant Gradient */
-  h1, h2, h3 {
-    font-weight: 800;
-    background: linear-gradient(135deg, #2563eb, #7c3aed);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -0.5px;
-  }
-
-  .hero-copy h1 span {
-    background: linear-gradient(90deg, #ff4e50, #f9d423);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucknow Home Tutors | Best Home Tuition</title>
+  <meta name="description" content="Find experienced home tutors in Lucknow">
   
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    /* Gradient & Bold Headings */
+    h1, h2, h3 {
+      font-weight: 800;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      line-height: 1.2;
+    }
+
+    /* Highlighted Span inside H1 */
+    .hero-copy h1 span {
+      background: linear-gradient(90deg, #ff4e50, #f9d423);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Navigation Styling */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 10px;
+      text-decoration: none;
+      color: #475569;
+      font-weight: 600;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    .btn.primary {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn.whatsapp {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .hero-actions {
+      margin: 20px 0;
+    }
+  </style>
 </head>
 <body>
+
   <header class="header">
-    <a class="logo" href="#home">Lucknow<spa
-    <button class="menu-btn" onclick="toggle
+    <a class="logo" href="#home">Lucknow Home Tutors</a>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
     <nav id="nav">
       <a href="#home">Home</a>
       <a href="#subjects">Subjects</a>
@@ -44,19 +118,28 @@
       <a href="#areas">Areas</a>
       <a href="#tutors">Tutors</a>
       <a href="#contact">Contact</a>
-      <a class="nav-cta" href="#book">Book T
+      <a class="nav-cta" href="#book">Book Tutor</a>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="home">
       <div class="hero-copy">
-        <div class="badge">🏠 1-to-1 Home Tuit
-        <h1>Find the right <span>home tutor</s
-        <p>Experienced tutors, personalized cl
+        <div class="badge">🏠 1-to-1 Home Tuition in Lucknow</div>
+        <h1>Find the right <span>home tutor</span> for your child.</h1>
+        <p>Experienced tutors, personalized classes, and convenient home tuition across Lucknow.</p>
+        
         <div class="hero-actions">
-          <a class="btn primary" href="#book">
-          <a class="btn whatsapp" href="https:
+          <a class="btn primary" href="#book">Book a Tutor</a>
+          <a class="btn whatsapp" href="https://wa.me/">WhatsApp Us</a>
         </div>
+        
         <div class="trust-row">
-            
+          <p>✓ Personalized learning &nbsp; ✓ Flexible timings &nbsp; ✓ Local tutors</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

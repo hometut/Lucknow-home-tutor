@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin | Lucknow Home Tutors</title>
+<link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+<header><h1>Lucknow Home Tutors — Admin</h1><button onclick="loadData()">Refresh</button></header>
+<main>
+<div class="login" id="loginBox">
+<h2>Admin Login</h2>
+<input id="user" placeholder="Username" value="admin">
+<input id="pass" type="password" placeholder="Password">
+<button onclick="login()">Login</button>
+<p id="loginMsg"></p>
+</div>
+<div id="dashboard" hidden>
+<div class="summary"><div><b id="students">0</b><span>Student Requests</span></div><div><b id="tutors">0</b><span>Tutor Applications</span></div><div><b id="newCount">0</b><span>New</span></div></div>
+<div class="toolbar"><input id="search" oninput="render()" placeholder="Search name, phone, area..."><select id="filter" onchange="render()"><option value="all">All</option><option value="student">Students</option><option value="tutor">Tutors</option></select></div>
+<div id="list"></div>
+</div>
+</main>
+<script src="/admin.js"></script>
+</body>
+</html>
